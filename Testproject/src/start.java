@@ -21,7 +21,7 @@ public class start {
         char r = '\u24C7';
 
 
-        System.out.println("Hello world !");
+        System.out.println("Hello \n world !");
         System.out.println(num);
         System.out.println(num1);
         System.out.println(num2);
