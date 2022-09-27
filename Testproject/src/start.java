@@ -1,6 +1,7 @@
 public class start {
     public final double pi = 3.14; //publick constatna (final) for all clases
-    public static void main (String[] args) {
+
+    public static void main(String[] args) {
         byte num = 127; //8 bit  -128 to 127
         short num1 = 32767; //16 bit -32768 to 32767
         int num2 = 2147483647; //32 bit -2147483648 to 2147483647
@@ -29,8 +30,21 @@ public class start {
         System.out.println(num10);
         System.out.println(num11);
         System.out.println(symb);
-        System.out.print(s); System.out.print(t); System.out.print(o); System.out.println(p);
+        System.out.print(s);
+        System.out.print(t);
+        System.out.print(o);
+        System.out.println(p);
         System.out.println(isTrue);
 
-}
+        double d = 1.0;
+        double g = 1.0;
+        System.out.println(d);
+        System.out.println(g);
+        System.out.println(d + g);
+        if (d == g) {
+            System.out.println("!");
+        } else {
+            System.out.print("?");
+        }
+    }
 }
