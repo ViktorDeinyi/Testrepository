@@ -2,9 +2,12 @@ package IrregularVerbs;
 
 
 import java.io.*;
+import java.util.Scanner;
 
 public class NewFile {
+
     public static void newFile() throws IOException {
+        // создание нового файла Влада кусок
         System.out.println("Write file name:");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         OutputStream outputStream = new FileOutputStream(reader.readLine());
@@ -20,7 +23,58 @@ public class NewFile {
                 break;
             }
         }
-//        outputStream.close();
-//        reader.close();
+        outputStream.close();
+////        reader.close();
+    }
+
+    public static String userName = "stepan@gmail.com";
+
+    public static void newFFile() {
+        // создание нового файла
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter file name");
+        String name = sc.next();
+        userName = name;
+        sc.nextLine();
+        try {
+            File newOne = new File(name);
+            if (newOne.createNewFile()) {
+                System.out.println("Ready " + newOne.getName());
+            } else {
+                System.out.println("Already exist ");
+            }
+        } catch (IOException e) {
+            System.out.println("Error ");
+            e.printStackTrace();
+        }
+    }
+
+    public static void writeToFile(String userName, String w) {
+//запись статистики в файл
+        try {
+            FileWriter user = new FileWriter(userName, true);
+            user.write(w);
+            user.close();
+            System.out.println("Succesfully write.");
+        } catch (IOException e) {
+            System.out.println("Error ");
+            e.printStackTrace();
+        }
+
+    }
+
+    public static void readFile(String us) {
+        try {
+        File readFile = new File (us);
+            Scanner read = new Scanner(readFile);
+            while (read.hasNextLine()) {
+                String data = read.nextLine();
+                System.out.println(data);
+            }
+            read.close();}
+            catch (FileNotFoundException e) {
+            System.out.println("Error reading");
+            e.printStackTrace();
+        }
     }
 }

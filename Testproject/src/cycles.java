@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class cycles {
     public static void main (String[] args ) {
 
-   //     for ( int num = 0; num < 5; num++ ) {
-    //        System.out.println("Пока что: " + num);
-       // }
+        for ( int num = 0; num < 5; num++ ) {
+            System.out.println("Пока что: " + num);
+        }
 
         Scanner scs = new Scanner(System.in);
         System.out.println("Какое любимое времяприпровождение твоего парня:");
